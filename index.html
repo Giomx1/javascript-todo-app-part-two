@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yobani's To do app</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+</head>
+
+<body>
+     <h1>To Do list</h1>
+  <form onsubmit="return false;" class="todo-form">
+      <div>
+        <input type="text" id="toDoInput" placeholder="What do you have to do?">
+        <button id="addItem">Add</button>
+        <span id="noOutput"></span>
+        </div>
+        <div>
+        <h1>Below is your to-do list</h1>
+        <ul id="toDoList"></ul>
+        <button id="removeItem">Delete Selected item</button>
+      </div>
+  </form>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
