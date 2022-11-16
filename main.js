@@ -1,4 +1,3 @@
-
 let deleteButton = document.getElementById("removeItem");
 let addButton = document.getElementById("addItem")
 let listOfToDos = document.getElementById("toDoList");
@@ -16,7 +15,7 @@ function getApi(){
                 list.push(responseData[i].title);
             }
             localStorage.setItem("list", JSON.stringify(list))
-            showOutput(list)
+            addItem()  
         })
 }
 
