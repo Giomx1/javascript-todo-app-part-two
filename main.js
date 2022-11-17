@@ -7,15 +7,17 @@ document.body.style.backgroundColor = "black";
 document.body.style.color = "white";
 
 function getApi(){
-    let list = []
+    let list = [];
     axios.get("https://jsonplaceholder.typicode.com/todos")
         .then(response => {
             const responseData = response.data;
             for (let i = 0; i < 5; i++) {
-                list.push(responseData[i].title);
+            let objectOflist = {text: userInputValue, id: inputId}
+            list.push(objectOflist);
+            list.push(responseData[i].title);
             }
             localStorage.setItem("list", JSON.stringify(list))
-            addItem()  
+            addItem();  
         })
 }
 
@@ -46,7 +48,8 @@ function addItem() {
     writeSomething.style.color = "red"
     return false;
   } else {//pushing to localstorage
-    list.push({text: userInputValue, id: inputId});
+    let objectOflist = {text: userInputValue, id: inputId}
+    list.push(objectOflist);
     getApi()
     localStorage.setItem("list", JSON.stringify(list));
     writeSomething.innerHTML = "";
