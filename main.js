@@ -8,12 +8,12 @@ document.body.style.color = "white";
 
 function getApi(){
     let list = [];
-    let inputId = Math.floor(Math.random() * 100);
 
     axios.get("https://jsonplaceholder.typicode.com/todos")
         .then(response => {
             const responseData = response.data;
             for (let i = 0; i < 5; i++) {
+            let inputId = Math.floor(Math.random() * 100);    
             let objectOfStuff = {text: responseData[i].title, id: inputId}
             list.push(objectOfStuff);
             }
